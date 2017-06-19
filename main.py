@@ -37,7 +37,6 @@ def blog_list():
 @app.route('/new_post', methods=['GET', 'POST'])
 def new_post():
 
-    
     if request.method == 'POST':
 
         # get user input
