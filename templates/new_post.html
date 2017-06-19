@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1><center>What's on your mind?</center></h1>
+
+<form method='post'>
+
+    <label> Title:<br>
+        <input type='text' name='new_blog_title' value='{{new_blog_title}}'>
+        <p class='error'>{{title_error}}</p>
+    </label>
+    <br>
+    <br>
+    <label> Body:<br>
+        <textarea name='new_blog_body' value='{{new_blog_body}}'></textarea>
+        <p class='error'>{{body_error}}</p>
+    </label>
+    <br>
+    <br>
+
+    <input type='submit' value='Add Entry'>
+
+
+</form>
+{% endblock %}
