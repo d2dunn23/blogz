@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<a href='http://localhost:5000/blog'>Home Page</a>
+<a href='/logout'>Logout</a>
 
 <h1><center>What's on your mind?</center></h1>
 
@@ -16,7 +18,6 @@
         <textarea name='new_blog_body' value='{{new_blog_body}}'></textarea>
         <p class='error'>{{body_error}}</p>
     </label>
-    <br>
     <br>
 
     <input type='submit' value='Add Entry'>

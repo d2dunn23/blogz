@@ -3,12 +3,18 @@
 {% block content %}
 
 
-<h1>{{ blog_title }}</a></h3>
+<h1>Blog Writers</h1>
+<nav>
+    <a href='/signup'>Time to Create an Account!</a>
+    <a href='/login'>Log In</a>
+    <a href='/logout'>Log Out</a>
+</nav>
 
-<p>{{ blog_body }}</p>
+{% for creator in creators %}
+        <a href='/blog?user={{creator.id}}'>{{creator.username}}</a>
+        
 
-
-
+{% endfor %}
 
 
 
