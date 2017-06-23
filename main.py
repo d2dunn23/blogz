@@ -19,7 +19,7 @@ class Blog(db.Model):
         self.body = body
 
 # primary route for blog
-@app.route('/blog')
+@app.route('/')
 def blog_list():
 
     id = request.args.get('id')
@@ -58,7 +58,7 @@ def new_post():
             db.session.add(new_post)
             db.session.commit()
             id = str(new_post.id)
-            return redirect('/blog?id={}'.format(id))
+            return redirect('/?id={}'.format(id))
         else:
             return render_template('new_post.html', body_error=body_error, title_error=title_error,
                 new_blog_title=new_blog_title, new_blog_body=new_blog_body)
@@ -71,4 +71,4 @@ def new_post():
 
 
 if __name__ == '__main__':
-app.run()
+    app.run()
